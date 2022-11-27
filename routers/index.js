@@ -14,6 +14,12 @@
 
     // TODO: add more routed methods here ...
 
+    const get_todo = require('./todo/get.method');
+    router.route('/todo').get(get_todo);
+
+    const post_todo = require('./todo/post.method');
+    router.route('/todo').post(post_todo);
+
     module.exports = router;
 
 })();
