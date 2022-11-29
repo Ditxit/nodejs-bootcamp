@@ -20,6 +20,12 @@
     const post_todo = require('./todo/post.method');
     router.route('/todo').post(post_todo);
 
+    const put_todo = require('./todo/put.method');
+    router.route('/todo').put(put_todo);
+
+    const delete_todo = require('./todo/delete.method');
+    router.route('/todo').delete(delete_todo);
+
     module.exports = router;
 
 })();

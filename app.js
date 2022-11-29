@@ -16,6 +16,21 @@ try {
         return next();
     });
 
+    // auth middleware
+    app.use((req, res, next) => {
+        // console.table(req.headers);
+
+        // if (!req.headers.authorization) {
+        //     return res.status(401).json({ message: "The authorization token was not passed" });
+        // }
+
+        // if (req.headers.authorization !== 'manish') {
+        //     return res.status(401).json({ message: "The authorization token invalid" });
+        // }
+
+        return next();
+    });
+
     const routers = require('./routers');
     app.use('/', routers);
 
